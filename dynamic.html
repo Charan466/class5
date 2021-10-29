@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1 id="heading">
+
+        </h1>
+    </div>
+    <script>
+        // ajax call or promises or fetch api or axios
+        fetch('./data.json').
+        then(
+            Response =>Response.json()
+        ).then(data =>details(data))
+         //console.log(data))
+        var main=document.querySelector(".main");
+
+        function details(info){
+            var name=document.getElementById("heading");
+            
+
+            name.textContent=info.name;
+            
+            main.appendChild(name);
+            var college=document.creatElementById("heading");
+            college.textContent=info.college;
+            main.appendChild(college);
+
+
+        }
+        
+
+    </script>
+    
+</body>
+</html>
